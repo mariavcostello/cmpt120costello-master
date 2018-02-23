@@ -1,4 +1,5 @@
 #Mad Libs program
+#Maria Costello
 def main():
     noun = input("Enter a noun: ")
     verb = input("Enter a verb: ")
