@@ -2,31 +2,18 @@
 # Lab #5 – Working with Strings and Functions
 # Author: Maria C
 # Created: 2018-03-2
-
-import random
-
-Animal = ('frog')
-correct = Animal
-count = 0
-
+animal= "frog"
 def main ():
-   print ('I am thinking of an animal!')
-   Animal = input("Enter first guess:")
-def guess ():
-   while False:
-       
-    print ("No, that is not correct. Hint, the animal is green.")
-    if guess 
-        guess == input("Enter first guess:")
-    if guess == "frog" :
-        print ('Yes! That is correct!!!')
-
-    
-def counter ():
-    counter=0
-    while True:
-        Animal= str(Animal, count)   
-
-    
+    while True :
+        print ("Thinking of an animal.")
+        guess = input ("What is your guess?")
+        if guess.lower () == animal.lower :
+            print ("Congratulations! That is correct")
+            break
+        elif guess == "quit":
+            break
+        else:
+            print ("Sorry, try again")
+        
 main ()
     
