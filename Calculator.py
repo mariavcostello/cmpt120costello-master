@@ -1,6 +1,10 @@
 from graphics import *
 import math
 
+# JA: This is just what I did in class. You should at least fix the problem
+# with the first row. This is not performing the calculations. Make sure that
+# you fix it because we are going to built on this.
+
 win = GraphWin('Calc', 320, 500)
 
 # Create text for the display area
@@ -52,7 +56,7 @@ def main():
         clicked = win.getMouse()
         print (clicked.getX(), clicked.getY())
         row, col = clickedButton(clicked)
-        if row > 0:
+        if row >= 0:
             buttons[row][col].setFill('lightgreen')
             displayString = (displayString + str(calcGrid[row][col])).rjust(150);
             displayTextElement.undraw()
