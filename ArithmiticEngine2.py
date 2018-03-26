@@ -17,7 +17,7 @@ def doLoop():
         cmd = input("What computation do you want to perform? ")
         cmdlower = cmd.lower()
         if cmdlower == "add":
-            num1, num2 = operands()
+            num1, num2 = operands() # Where is this function defined?
             result = num1 + num2
         elif cmdlower == "sub":
             num1, num2 = operands()
