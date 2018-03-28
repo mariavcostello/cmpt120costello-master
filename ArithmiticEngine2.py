@@ -1,7 +1,7 @@
 
 # CMPT 120 - Lab #6
-# YOUR NAME
-# DD-MMM-YYYY
+# Maria Costello
+# 22-03-2018
 ###
 
 def showIntro():
