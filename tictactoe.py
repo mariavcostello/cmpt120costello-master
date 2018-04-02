@@ -44,10 +44,12 @@ def hasBlanks(board):
                     print('')
                     return False 
 def main():
-   player = 1
-while hasBlanks(board):
+    player = 1
+    while hasBlanks(board):
         printBoard(board)
         row,col = getPlayerMove()
         if markBoard(board,row,col,player):
             player = player % 2 + 1
+    printBoard(board)
+    
 main()

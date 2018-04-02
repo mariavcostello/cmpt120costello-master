@@ -2,6 +2,8 @@
 #Project 3 Scientific
 #March-29-2018
 
+# JA: There are some problems with the new functions
+
 from graphics import *
 from button import Button
 import math
