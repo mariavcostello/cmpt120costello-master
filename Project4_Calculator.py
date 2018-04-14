@@ -85,7 +85,7 @@ def processButton(key, display, runDisp, memory):
         display.setText(result)
     elif key == "MS":
         memory = display.setText(memory)
-    #science keys
+    #scientific keys
     elif key == "log":
         display.setText(math.log10(int(text)))
     elif key == "x^y":
@@ -130,8 +130,7 @@ def processButton(key, display, runDisp, memory):
             result = "Error!!!"
         display.setText(result)
     else:
-        display.setText(text + key)
-    #fixed clear on second display    
+        display.setText(text + key)    
     runDisp.setText(str(text) + str(key))
 def main():
     buttons, display, calc, runDisp = createCalculatorGui()
