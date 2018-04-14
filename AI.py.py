@@ -15,7 +15,7 @@ emotionMatrix = [
     [4, 3, 5, 2]
 ]
 
-feelingslist = ["anger", "disgust", "happiness", "sadness", "surprise", "fear"]
+feelingslist = ["angry", "disgusted", "happy", "sad", "surprised", "fearful"]
 actionslist = ["reward", "punish", "threaten", "joke"]
 reactionlist = ["Grrr! That made me angry!", "Umm, eww! that is disgusting", "HA! you are awesome! That made me so happy", "Boohoo, you are going to make me cry like a baby", "Wait, what?! Very Surprising",  "Now I'm scared"]
 
@@ -27,7 +27,7 @@ def introduction():
     
 
 def getInteraction():
-     userAction = input("What do you want to do to Al? (Type either reward, punish, joke or threaten): ")
+    userAction = input("What do you want to do to Al? (Type either reward, punish, joke or threaten): ")
     try:
         userAction = actionslist.index(userAction)
     except:
@@ -35,8 +35,8 @@ def getInteraction():
     return userAction
 
 def lookupEmotion(currEmotion, userAction):
-pass # TODO do the matrix lookup
-return 0 # return an integer corresponding to an emotion
+    newemotion = emotionMatrix[currEmotion][userAction]
+    return newemotion
 def main():
     goonforever = True
     currEmotion = introduction()
