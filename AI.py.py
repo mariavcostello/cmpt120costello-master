@@ -6,6 +6,18 @@
 
 import random
 
+emotionMatrix = [
+    [4, 0, 0, 2],
+    [2, 0, 0, 2], 
+    [2, 3, 5, 2],
+    [2, 3, 3, 2],
+    [2, 3, 5, 2],
+    [4, 3, 5, 2]
+]
+
+feelingslist = ["anger", "disgust", "happiness", "sadness", "surprise", "fear"]
+actionslist = ["reward", "punish", "threaten", "joke"]
+reactionlist = ["Grrr! That made me angry!", "Umm, eww! that is disgusting", "HA! you are awesome! That made me so happy", "Boohoo, you are going to make me cry like a baby", "Wait, what?! Very Surprising",  "Now I'm scared"]
 
 def introduction():
     print("Hello. My name is Arty and I am an AI.")
@@ -14,20 +26,31 @@ def introduction():
     print("Today I am feeling kind of: " + emotion)
     
 
-# Get the mode of interaction from the user
-# Params: none
-# Returns: an integer indicating one of reward, punish, joke, or threaten
 def getInteraction():
-pass # TODO prompt user to choose an action
-return 0 # return a corresponding integer
-# Based on a given emotion and action, determine the next emotional state
-# Params:
-# currEmotion - a current emotion
-# userAction - a user interaction
-# Returns: an emotion
+     userAction = input("What do you want to do to Al? (Type either reward, punish, joke or threaten): ")
+    try:
+        userAction = actionslist.index(userAction)
+    except:
+        userAction = 4
+    return userAction
+
 def lookupEmotion(currEmotion, userAction):
 pass # TODO do the matrix lookup
 return 0 # return an integer corresponding to an emotion
+def main():
+    goonforever = True
+    currEmotion = introduction()
+    while goonforever == True:
+        userAction = getInteraction()
+        if userAction == 4:
+            print("Invalid Action")
+            print('\n')
+            continue
+        else:
+            currEmotion = lookupEmotion(currEmotion, userAction)
+            print(reactionlist[currEmotion])
+            print('\n')
+    return
 
 
 main()
