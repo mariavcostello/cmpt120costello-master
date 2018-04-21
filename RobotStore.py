@@ -12,34 +12,35 @@ productNames = [ "Ultrasonic range finder"
 productPrices = [ 2.50, 14.99, 44.95, 34.95, 149.99, 8.99 ]
 productQuantities = [ 4, 10, 5, 7, 2, 8 ]
 class Product:
-    
-    def __init__ (self, name, price, productquantity):
-        
+
+    def __init__(self, name, price, quantity):
         self.name = name
         self.price = price
-        self.productquantity = productquantity
+        self.quantity = quantity
 
     def stock(self, count):
-        if self.productquantity >= amount:
+        if self.quantity >= int(count):
             return True
         else:
             return False
 
-    def cost(self, count):
+    def cost(self,count):
         cost = int(count) * self.price
         return cost
 
-    def quantity (self, count):
+    def quantity(self,count):
         self.quantity = self.quantity - int(count)
         return self.quantity
+        
 
-def printStock():
+        
+def printStock(products):
     print()
     print("Available Products")
     print("------------------")
     n = 0
     for p in products:
-        if productquantities > 0:
+        if p.quantity > 0:
             print(n, p.name, "$", p.price)
         n += 1
     print()
@@ -66,7 +67,7 @@ def main():
         product = products[prodId]
         count = int(vals[1])
 
-        if productQuantities[prodId] >= count:
+        if product.stock(count):
             if cash >= product.cost(count):
                 product.quantity(count)
                 cash -= product.cost(count)
