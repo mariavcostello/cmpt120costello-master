@@ -3,6 +3,8 @@
 #Prof. Arias
 #April-2-2018
 
+# JA: Your parenthesis are not grouping properly. Some of the sequences
+# from the examples in the project description are not working properly.
 
 from graphics import *
 from button import Button

@@ -60,9 +60,7 @@ class TennisGame:
 
     def isOver(self):
 
-        return (self.playerA.getScore() >=40  or self.playerB.getScore() >=40)
-
-            and abs(self.playerA.getScore()-self.playerB.getScore())>=30
+        return (self.playerA.getScore() >=40  or self.playerB.getScore() >=40) and abs(self.playerA.getScore()-self.playerB.getScore())>=30
 
     def changeServer(self):
 

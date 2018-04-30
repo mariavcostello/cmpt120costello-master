@@ -24,6 +24,7 @@ def introduction():
     emotion = random.choice(feelingslist)
     indexfeeling = feelingslist.index(emotion)
     print("Today I am feeling kind of: " + emotion)
+    return indexfeeling # JA
     
 
 def getInteraction():

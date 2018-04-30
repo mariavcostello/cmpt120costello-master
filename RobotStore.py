@@ -10,7 +10,8 @@ productNames = [ "Ultrasonic range finder"
  , "Lithium polymer battery"
  ]
 productPrices = [ 2.50, 14.99, 44.95, 34.95, 149.99, 8.99 ]
-productQuantities = [ 4, 10, 5, 7, 2, 8 ]
+productQuantities = [ 4, 10, 5, 7, 2, 8 ]
+
 class Product:
 
     def __init__(self, name, price, quantity):
@@ -28,7 +29,7 @@ class Product:
         cost = int(count) * self.price
         return cost
 
-    def quantity(self,count):
+    def inventory(self,count):
         self.quantity = self.quantity - int(count)
         return self.quantity
         
@@ -69,7 +70,7 @@ def main():
 
         if product.stock(count):
             if cash >= product.cost(count):
-                product.quantity(count)
+                product.inventory(count)
                 cash -= product.cost(count)
                 print ("You purchased", count, product.name+".")
                 print ("You have $", "{0:.2f}".format(cash), "remaining.")
